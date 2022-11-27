@@ -14,7 +14,7 @@ gdf = gpd.read_file(path)
 import contextily as cx
 fig, ax = plt.subplots(figsize=(10, 10))
 
-gdf = gdf[gdf['suburb'] == 'Newtown']
+# gdf = gdf[gdf['suburb'] == 'Newtown']
 
 gdf = gdf.to_crs('EPSG:2193')
 gdf.plot(ax=ax, edgecolor='black', alpha=0.4)
@@ -42,6 +42,4 @@ buildings_newtown = gpd.clip(buildings, gdf)
 buildings_newtown.plot(ax=ax, color='purple', alpha=0.5)
 
 '''
-# %%
-print("hi")
 # %%
